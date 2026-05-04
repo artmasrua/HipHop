@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bnqugflem34g8"]
+
+[ext_resource type="Script" uid="uid://dic2eywld1epl" path="res://script/logic_gate_door.gd" id="1_sknks"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_sknks"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sknks"]
+size = Vector2(23.5, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujdqh"]
+size = Vector2(58, 56)
+
+[node name="LogicGateDoor" type="Node2D" unique_id=2096449629]
+script = ExtResource("1_sknks")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1881753027]
+scale = Vector2(23.5, 52)
+texture = SubResource("CanvasTexture_sknks")
+
+[node name="Blocker" type="StaticBody2D" parent="." unique_id=252115995]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocker" unique_id=2138484116]
+shape = SubResource("RectangleShape2D_sknks")
+
+[node name="Sensor" type="Area2D" parent="." unique_id=542420869]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sensor" unique_id=1326576411]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_ujdqh")
+
+[node name="Label" type="Label" parent="." unique_id=761663448]
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1

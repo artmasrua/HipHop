@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ca60ftqmmae2u"]
+
+[ext_resource type="Script" uid="uid://dbr6huobj081e" path="res://script/reset_station.gd" id="1_o7yy8"]
+[ext_resource type="Texture2D" uid="uid://cc05lweqpilbu" path="res://Assets/kenney_ui-pack/PNG/Extra/Default/icon_repeat_outline.png" id="2_1bi2c"]
+[ext_resource type="FontFile" uid="uid://c8gxvplelcnxi" path="res://Assets/minecraftia/Minecraftia-Regular.ttf" id="3_1bi2c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4fqsh"]
+radius = 11.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_4fqsh"]
+font = ExtResource("3_1bi2c")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[node name="ResetStation" type="Area2D" unique_id=517749794]
+collision_layer = 0
+script = ExtResource("1_o7yy8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1007429688]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1bi2c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2089057356]
+shape = SubResource("CircleShape2D_4fqsh")
+
+[node name="InteractHint" type="Label" parent="." unique_id=1064610851]
+visible = false
+offset_left = -15.0
+offset_top = -34.0
+offset_right = 25.0
+offset_bottom = -11.0
+text = "Reset"
+label_settings = SubResource("LabelSettings_4fqsh")

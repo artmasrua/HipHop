@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dsn8ufb7h3n3a"]
+
+[ext_resource type="Script" uid="uid://cj0avabr056th" path="res://script/barrier.gd" id="1_qfl2k"]
+[ext_resource type="FontFile" uid="uid://c8gxvplelcnxi" path="res://Assets/minecraftia/Minecraftia-Regular.ttf" id="2_8ilpk"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_exqad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ilpk"]
+size = Vector2(11.666668, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfl2k"]
+size = Vector2(21, 20)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ilpk"]
+line_spacing = 0.0
+font = ExtResource("2_8ilpk")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[node name="Barrier" type="Node2D" unique_id=434703925]
+scale = Vector2(3, 3)
+script = ExtResource("1_qfl2k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1769244389]
+position = Vector2(-0.50000036, -0.5000006)
+scale = Vector2(11.666668, 15)
+texture = SubResource("CanvasTexture_exqad")
+
+[node name="Blocker" type="StaticBody2D" parent="." unique_id=1510144360]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocker" unique_id=493311930]
+position = Vector2(-0.49999976, -0.49999994)
+shape = SubResource("RectangleShape2D_8ilpk")
+
+[node name="Sensor" type="Area2D" parent="." unique_id=233589154]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sensor" unique_id=916325265]
+position = Vector2(-0.49999952, -2.9999995)
+shape = SubResource("RectangleShape2D_qfl2k")
+
+[node name="Label" type="Label" parent="." unique_id=508909659]
+offset_left = -3.666666
+offset_top = -5.666667
+offset_right = 4.333334
+offset_bottom = 8.333333
+text = "A"
+label_settings = SubResource("LabelSettings_8ilpk")
+horizontal_alignment = 1
+vertical_alignment = 1

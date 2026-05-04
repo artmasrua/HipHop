@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cm3nbtn4m4p1y"]
+
+[ext_resource type="Script" uid="uid://cnyrsrg8kctxp" path="res://script/hud.gd" id="1_ahhtf"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1419401191]
+script = ExtResource("1_ahhtf")
+
+[node name="Panel" type="Panel" parent="." unique_id=1681045539]
+offset_right = 300.0
+offset_bottom = 100.0
+
+[node name="ElementsLabel" type="RichTextLabel" parent="." unique_id=577203295]
+offset_right = 299.0
+offset_bottom = 99.0
+bbcode_enabled = true
