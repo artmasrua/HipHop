@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cfyx5ulraehl3"]
+
+[ext_resource type="Texture2D" uid="uid://cwmikyuq7wo6d" path="res://Assets/Background/Nature Landscapes Free Pixel Art/nature_2/orig.png" id="1_n6kxh"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=2140609627]
+position = Vector2(640.5, 360.5)
+scale = Vector2(2.2239585, 2.2191358)
+texture = ExtResource("1_n6kxh")
+
+[node name="Label" type="Label" parent="." unique_id=981867308]
+offset_left = -112.18733
+offset_top = -131.80807
+offset_right = 117.81267
+offset_bottom = -86.808075
+theme_override_colors/font_color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+theme_override_font_sizes/font_size = 32
+text = "Rainbow Roots"
+
+[node name="Label2" type="Label" parent="." unique_id=179026341]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=765891365]
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.641
+anchor_right = 0.504
+anchor_bottom = 0.641
+offset_left = -711.0
+offset_top = -457.0
+offset_right = -571.0
+offset_bottom = -80.68399
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1197009644]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=232123591]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1886862132]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=732239856]
+layout_mode = 2
