@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://b4np7i2dlpxgi" path="res://Assets/Character/Eris Esra's Character Template 4.0/16x16/16x16 Idle-Sheet.png" id="3_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://banywilbu8ru6" path="res://Assets/Character/Eris Esra's Character Template 4.0/16x16/16x16 Jump-Sheet.png" id="4_tuyoq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
-size = Vector2(18, 24)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
+height = 24.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
 atlas = ExtResource("2_dqkch")
@@ -119,12 +119,12 @@ script = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1983184544]
 position = Vector2(0, 3)
-shape = SubResource("RectangleShape2D_dqkch")
+shape = SubResource("CapsuleShape2D_dqkch")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=285354861]
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_i4ail")
-animation = &"jump"
+animation = &"idle"
 
 [node name="InteractArea" type="Area2D" parent="." unique_id=1729887356]
 collision_layer = 0

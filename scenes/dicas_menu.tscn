@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://c154b21be6i8a"]
+
+[ext_resource type="Script" uid="uid://d240ba1o0chov" path="res://script/dicas_menu.gd" id="1_06oib"]
+
+[node name="DicasMenu" type="CanvasLayer" unique_id=1262155429]
+script = ExtResource("1_06oib")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1582008039]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7058824)
+
+[node name="Panel" type="Panel" parent="." unique_id=885914605]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -350.0
+offset_right = 400.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=393873711]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center][b]Teoria dos Conjuntos[/b][/center]
+
+[b]O que é um conjunto?[/b]
+Um conjunto é uma coleção de objetos, números ou símbolos que chamamos de [b]elementos[/b].
+Representamos um conjunto com chaves { } e listamos seus elementos separados por vírgulas.
+
+Exemplos:
+A = {1, 2, 3}  (conjunto dos números 1, 2 e 3)
+B = {a, e, i, o, u}  (conjunto das vogais)
+C = { }  (conjunto vazio, sem elementos)
+
+Os conjuntos são a base da matemática e nos ajudam a organizar e relacionar informações. No jogo, cada cor representa um conjunto e os números que você coleta são os elementos que pertencem a esses conjuntos.
+
+[center]━━━━━━━━━━━━[/center]
+
+[b]Pertinência (∈)[/b]
+Indica que um elemento pertence a um conjunto.
+Exemplo: se A = {2, 4, 6}, então [b]2 ∈ A[/b] (2 pertence a A).
+Se um elemento não pertence, usamos [b]∉[/b]. Exemplo: 3 ∉ A.
+
+[b]Conjunto Vazio (∅)[/b]
+É o conjunto que não possui nenhum elemento.
+Exemplo: ∅ = { }.
+Representa a ideia de \"nada\" ou \"ausência\".
+
+[b]União (∪)[/b]
+A união de dois conjuntos reúne todos os elementos de ambos, sem repetir.
+Exemplo: A = {1, 2}, B = {2, 3}.
+A ∪ B = {1, 2, 3}.
+
+[b]Interseção (∩)[/b]
+A interseção contém apenas os elementos que estão nos dois conjuntos ao mesmo tempo.
+Exemplo: A = {1, 2}, B = {2, 3}.
+A ∩ B = {2} (apenas o 2 está em ambos).
+
+[b]Diferença (−)[/b]
+A diferença A − B contém os elementos que estão em A, mas [b]não[/b] estão em B.
+Exemplo: A = {1, 2, 3}, B = {2, 3, 4}.
+A − B = {1} (o 1 está em A e não em B).
+
+[b]Complemento (Aᶜ)[/b]
+O complemento de A é formado por todos os elementos que [b]não[/b] pertencem a A, considerando um universo U.
+Exemplo: U = {1, 2, 3, 4}, A = {1, 2}.
+Aᶜ = {3, 4}.
+
+[b]Subconjunto (⊆)[/b]
+Um conjunto A é subconjunto de B se todos os elementos de A também estão em B.
+Exemplo: A = {1, 2}, B = {1, 2, 3}.
+A ⊆ B (A está contido em B).
+Se A pode ser igual a B, usamos ⊆. Se tem que ser menor, usamos ⊂ (subconjunto próprio).
+
+[b]Está contido (⊂)[/b]
+Indica que um conjunto está contido em outro, mas [b]não é igual[/b] a ele.
+Exemplo: A = {1, 2}, B = {1, 2, 3}.
+A ⊂ B (A está contido em B e é diferente de B).
+
+[b]Contém (⊃)[/b]
+É o inverso de \"está contido\". Significa que um conjunto contém outro.
+Exemplo: B = {1, 2, 3}, A = {1, 2}.
+B ⊃ A (B contém A).
+
+[i]Note que: Se A ⊂ B, então B ⊃ A.[/i]
+
+[center]━━━━━━━━━━━━[/center]
+Essas são as operações básicas. No mundo do jogo, elas aparecem como portas, barreiras e desafios que você deve resolver coletando os elementos certos!"

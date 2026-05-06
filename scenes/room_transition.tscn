@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bvarl6iig8q3b"]
+
+[ext_resource type="Script" uid="uid://bp3vavpkyop42" path="res://script/room_transition.gd" id="1_amjp8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amjp8"]
+size = Vector2(48, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ld2sv"]
+size = Vector2(20, 64)
+
+[node name="RoomTransition" type="Area2D" unique_id=473637662]
+collision_layer = 0
+script = ExtResource("1_amjp8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=602370]
+position = Vector2(17, 20)
+shape = SubResource("RectangleShape2D_amjp8")
+
+[node name="Blocker" type="StaticBody2D" parent="." unique_id=32162688]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocker" unique_id=78886724]
+position = Vector2(-47, 16)
+shape = SubResource("RectangleShape2D_ld2sv")

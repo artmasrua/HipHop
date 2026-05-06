@@ -34,6 +34,13 @@ func _ready():
 	add_to_group("Player")
 
 func _physics_process(delta):
+	# Se o menu de dicas estiver aberto, congela o personagem
+	var dicas_menu = get_tree().get_first_node_in_group("DicasMenu")
+	if dicas_menu and dicas_menu.visible:
+		# Mantém a animação de idle enquanto congelado
+		if animated_sprite.animation != "idle":
+			animated_sprite.play("idle")
+		return  # Sai da função sem atualizar física
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
@@ -62,6 +69,11 @@ func _physics_process(delta):
 
 # Interação
 func _input(event):
+	if event.is_action_pressed("hint"):
+		var dicas = get_tree().get_first_node_in_group("DicasMenu")
+		if dicas and dicas.has_method("toggle"):
+			dicas.toggle()
+	# ... resto do código de interação com E ...
 	if event.is_action_pressed("interact") and items_in_range.size() > 0:
 		var item = items_in_range[0]
 		if item.has_method("collect"):

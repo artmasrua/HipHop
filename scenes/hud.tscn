@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cm3nbtn4m4p1y"]
 
 [ext_resource type="Script" uid="uid://cnyrsrg8kctxp" path="res://script/hud.gd" id="1_ahhtf"]
+[ext_resource type="Texture2D" uid="uid://c4kgkascuplmm" path="res://Assets/kenney_input-prompts_1.4.1/Keyboard & Mouse/Default/keyboard_q.png" id="2_oo0fn"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1419401191]
 script = ExtResource("1_ahhtf")
@@ -10,6 +11,33 @@ offset_right = 300.0
 offset_bottom = 100.0
 
 [node name="ElementsLabel" type="RichTextLabel" parent="." unique_id=577203295]
+offset_top = 28.0
 offset_right = 299.0
 offset_bottom = 99.0
 bbcode_enabled = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=20151010]
+offset_left = 3.0
+offset_right = 303.0
+offset_bottom = 23.0
+text = "Inventário de elementos"
+fit_content = true
+scroll_active = false
+
+[node name="Panel2" type="Panel" parent="." unique_id=2035048568]
+offset_left = 1.0
+offset_top = 641.0
+offset_right = 136.0
+offset_bottom = 720.0
+
+[node name="KeyboardQ" type="Sprite2D" parent="." unique_id=1156898301]
+position = Vector2(40, 679)
+texture = ExtResource("2_oo0fn")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1061154060]
+offset_left = 80.0
+offset_top = 668.0
+offset_right = 127.0
+offset_bottom = 688.0
+text = "Ajuda"
+scroll_active = false
