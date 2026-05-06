@@ -1,27 +1,58 @@
 [gd_scene format=3 uid="uid://cocl0b8yp3u8m"]
 
-[node name="Sprite2D" type="Sprite2D" unique_id=247065517]
+[ext_resource type="Texture2D" uid="uid://d6yviws1gtih" path="res://Assets/Background/Nature Landscapes Free Pixel Art/nature_1/orig.png" id="1_bbnnc"]
+[ext_resource type="Script" uid="uid://cdgiij4px1smg" path="res://script/tela_final.gd" id="2_eaagj"]
+
+[node name="TelaFinal" type="Sprite2D" unique_id=247065517]
+z_index = -1
+position = Vector2(639.99994, 359)
+scale = Vector2(2.222222, 2.2129629)
+texture = ExtResource("1_bbnnc")
+script = ExtResource("2_eaagj")
 
 [node name="Label" type="Label" parent="." unique_id=1856162809]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -131.4
+offset_top = -64.84519
+offset_right = 136.6
+offset_bottom = -17.845192
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 34
+text = "Você Conseguiu!"
 
 [node name="Label2" type="Label" parent="." unique_id=1061993314]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -116.55
+offset_top = -138.95398
+offset_right = 123.45
+offset_bottom = -69.95398
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Parabéns!"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=239185170]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Button" type="Button" parent="." unique_id=1212578878]
+anchors_preset = -1
+anchor_left = 0.513
+anchor_top = 0.545
+anchor_right = 0.513
+anchor_bottom = 0.545
+offset_left = -337.33798
+offset_top = -180.19505
+offset_right = -238.33801
+offset_bottom = -143.59256
+text = "Novo Jogo"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1793914784]
-layout_mode = 2
+[node name="Button2" type="Button" parent="." unique_id=453541694]
+anchors_preset = -1
+anchor_left = 0.509
+anchor_top = 0.694
+anchor_right = 0.509
+anchor_bottom = 0.694
+offset_left = -316.58395
+offset_top = -182.8309
+offset_right = -258.98395
+offset_bottom = -141.25768
+text = "Sair"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=376705061]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2055004361]
-layout_mode = 2
-
-[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2005302404]
-layout_mode = 2
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

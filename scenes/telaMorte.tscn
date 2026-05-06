@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://yqv248mea4c0"]
+
+[ext_resource type="Texture2D" uid="uid://1ahro7oki2kq" path="res://Assets/Background/New free backgrounds part5/background 1/orig.png" id="1_uisf7"]
+[ext_resource type="Script" uid="uid://dfuyr145s8ubm" path="res://script/tela_morte.gd" id="2_5h8jh"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=639325672]
+position = Vector2(641.5, 360)
+scale = Vector2(2.2239583, 2.2160494)
+texture = ExtResource("1_uisf7")
+script = ExtResource("2_5h8jh")
+
+[node name="Label" type="Label" parent="." unique_id=149026524]
+offset_left = -94.201416
+offset_top = -89.79944
+offset_right = 79.798584
+offset_bottom = -52.79944
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+text = "Você Morreu!"
+
+[node name="Label2" type="Label" parent="." unique_id=1318753183]
+offset_left = -162.09837
+offset_top = -44.222843
+offset_right = 147.90163
+offset_bottom = -13.222843
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "Tente Novamente ou desista!"
+
+[node name="Button" type="Button" parent="." unique_id=1533915525]
+offset_left = -86.55738
+offset_top = 5.415042
+offset_right = 74.41688
+offset_bottom = 41.515324
+text = "Tentar Novamente"
+
+[node name="Button2" type="Button" parent="." unique_id=83073203]
+offset_left = -46.53865
+offset_top = 60.016712
+offset_right = 29.002335
+offset_bottom = 98.82451
+text = "Desistir"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

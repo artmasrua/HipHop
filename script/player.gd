@@ -34,6 +34,10 @@ func _ready():
 	add_to_group("Player")
 
 func _physics_process(delta):
+	# Acessa a cena principal para verificar a pausa manual
+	var main = get_tree().current_scene
+	if main and main.has_method("_on_jogar") and main.jogo_pausado:
+		return 
 	# Se o menu de dicas estiver aberto, congela o personagem
 	var dicas_menu = get_tree().get_first_node_in_group("DicasMenu")
 	if dicas_menu and dicas_menu.visible:
