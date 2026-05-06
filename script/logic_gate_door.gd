@@ -1,7 +1,7 @@
 extends Node2D
 
 # Tipo de condição lógica
-@export_enum("union", "intersection", "custom") var condition_type := "union"
+@export_enum("union", "intersection", "custom", "exact") var condition_type := "union"
 
 # Para union e intersection
 @export var element_a := "A"
@@ -57,6 +57,13 @@ func evaluate_condition(player) -> bool:
 					return false
 			for elem in forbidden_elements:
 				if player.has_element(str(elem)):
+					return false
+			return true
+		"exact":
+			if player.current_elements.size() != required_elements.size():
+				return false
+			for elem in required_elements:
+				if not player.has_element(str(elem)):
 					return false
 			return true
 	return false

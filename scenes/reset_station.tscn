@@ -10,7 +10,6 @@ radius = 11.0
 [sub_resource type="LabelSettings" id="LabelSettings_4fqsh"]
 font = ExtResource("3_1bi2c")
 font_size = 8
-font_color = Color(0, 0, 0, 1)
 
 [node name="ResetStation" type="Area2D" unique_id=517749794]
 collision_layer = 0
@@ -24,10 +23,9 @@ texture = ExtResource("2_1bi2c")
 shape = SubResource("CircleShape2D_4fqsh")
 
 [node name="InteractHint" type="Label" parent="." unique_id=1064610851]
-visible = false
 offset_left = -15.0
-offset_top = -34.0
-offset_right = 25.0
-offset_bottom = -11.0
+offset_top = -24.0
+offset_right = 14.0
+offset_bottom = -10.0
 text = "Reset"
 label_settings = SubResource("LabelSettings_4fqsh")

@@ -13,12 +13,18 @@ collision_layer = 0
 script = ExtResource("1_amjp8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=602370]
-position = Vector2(17, 20)
+position = Vector2(46, 20)
 shape = SubResource("RectangleShape2D_amjp8")
 
 [node name="Blocker" type="StaticBody2D" parent="." unique_id=32162688]
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocker" unique_id=78886724]
-position = Vector2(-47, 16)
+position = Vector2(-15, 17)
 shape = SubResource("RectangleShape2D_ld2sv")
+
+[node name="Timer" type="Timer" parent="." unique_id=1139500188]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
